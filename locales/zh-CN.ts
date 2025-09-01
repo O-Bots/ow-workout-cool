@@ -1,4 +1,32 @@
 export default {
+  leaderboard: {
+    title: "排行榜",
+    description: "锻炼冠军",
+    champion_badge: "🏆 冠军",
+    runner_up_badge: "🥈 亚军",
+    third_place_badge: "🥉 第三名",
+    second_place: "第二名",
+    third_place: "第三名",
+    workouts: "次锻炼",
+    unable_to_load: "无法加载排行榜",
+    try_again_later: "请稍后再试",
+    no_champions_yet: "还没有冠军",
+    complete_first_workout: "完成您的第一次锻炼来夺取王座！",
+    member_since: "会员自",
+    workouts_per_week: "次/周",
+    last_workout: "上次锻炼",
+    page_title: "冠军排行榜",
+    page_subtitle: "登上顶峰，成为 Workout.cool 传奇",
+    period_all_time: "所有时间",
+    period_monthly: "月度",
+    period_weekly: "每周",
+    no_sessions_this_week: "本周没有训练",
+    no_sessions_this_month: "本月没有训练",
+    registered_members_only: "仅限注册会员",
+    registered_members_description: "创建账户以出现在排行榜中",
+    reset_timezone: "欧洲/巴黎重置",
+    reset_timezone_description: "每周和每月排行榜在巴黎时间午夜重置",
+  },
   programs: {
     available_programs: "可用的课程",
     workout_programs: "锻炼程序",
@@ -421,6 +449,8 @@ export default {
     home: "首页",
   },
   bottom_navigation: {
+    statistics: "统计",
+    statistics_tooltip: "查看您的统计",
     programs: "课程",
     programs_tooltip: "浏览课程",
     workouts: "锻炼",
@@ -431,6 +461,8 @@ export default {
     tools_tooltip: "浏览工具",
     profile: "个人资料",
     profile_tooltip: "查看您的个人资料",
+    leaderboard: "排行榜",
+    leaderboard_tooltip: "查看排行榜",
   },
   levels: {
     BEGINNER: "初学者",
@@ -498,6 +530,11 @@ export default {
     title: "新功能",
     release_notes: "更新日志",
     notes: {
+      note_2025_08_18: {
+        title: "🏆 新排行榜功能！",
+        content:
+          "<li>新的<strong>排行榜</strong>功能，与其他训练冠军竞争</li><li>按<strong>历史总榜、月榜和周榜</strong>查看排名</li><li>跟踪您在顶级表现者中的位置</li><li>激励自己攀登排行榜！🚀</li>",
+      },
       note_2025_07_09: {
         title: "🎯 运动选择、收藏和新工具",
         content:
@@ -796,6 +833,9 @@ export default {
     },
   },
   commons: {
+    last_activity: "最近活动",
+    registered_on: "注册于",
+    just_now: "刚刚",
     signup_with: "使用 {provider} 注册",
     signin_with: "使用 {provider} 登录",
     signup: "注册",
@@ -1735,6 +1775,90 @@ export default {
         multidisciplinary: "与医疗团队采用多学科方法",
       },
     },
+  },
+  statistics: {
+    title: "统计数据",
+    page_subtitle: "通过高级分析和个性化洞察，追踪您的健身之旅。",
+    select_exercise: "选择练习",
+    active_daily_users: "每日活跃用户",
+    success_rate: "成功率",
+    user_rating: "用户评分",
+
+    // Tabs
+    tabs: {
+      video: "视频",
+      statistics: "统计数据",
+    },
+
+    // Chart titles and labels
+    weight: "重量",
+    volume: "训练量",
+    weight_progression: "重量进展",
+    weight_progression_chart: "重量进展图表",
+    weekly_volume: "每周训练量",
+    volume_chart: "训练量图表",
+    estimated_1rm: "估计最大单次重量 (1RM)",
+    one_rep_max_chart: "最大单次重量图表",
+    performance_over_time: "随时间的表现",
+
+    // Form and controls
+    timeframe: "时间范围",
+    timeframe_selector: "时间范围选择器",
+
+    // Timeframes
+    timeframes: {
+      "4weeks": "4周",
+      "8weeks": "8周",
+      "12weeks": "12周",
+      "1year": "1年",
+    },
+
+    // Error messages
+    error_loading_data: "加载数据时出错",
+    error_loading_weight_progression: "加载重量进展时出错",
+    error_loading_1rm: "加载1RM数据时出错",
+    error_loading_volume: "加载训练量数据时出错",
+
+    // Empty states
+    no_data_yet: "暂无数据",
+    start_tracking: "开始跟踪以查看您的进展",
+    no_1rm_data: "没有可用的1RM数据",
+    complete_sets_with_weight: "完成带重量的组数以查看您的最大单次重量 (1RM)",
+    no_volume_data: "没有可用的训练量数据",
+    complete_workouts: "完成训练以查看您的训练量",
+
+    // Info and tooltips
+    "1rm_formula_info": "1RM公式信息",
+    volume_calculation: "训练量 = 重量 × 次数 × 组数",
+    last_updated: "最后更新：{date}",
+
+    // Premium
+    premium_required: "需要高级版才能访问统计数据",
+
+    // StatisticsPreviewOverlay
+    premium_statistics: "高级统计",
+    premium_statistics_description: "通过每个练习的高级分析，获得关于您健身之旅的详细见解。",
+    total_volume: "总训练量",
+    pr_increase: "PR 增加",
+    weight_progress: "重量进展",
+    upgrade_now: "立即升级",
+    rating: "4.8/5 评分",
+    no_ads: "无广告",
+    cancel_anytime: "随时取消",
+    preview_notice: "这只是预览！👀",
+    preview_description: "解锁完整访问权限，获得详细分析、进度跟踪和个性化见解。",
+    get_premium_access: "获得高级访问权限",
+
+    // ExercisesBrowser
+    all_equipment: "所有器械",
+    all_muscles: "所有肌肉",
+    search_exercises: "搜索练习",
+    error_loading_exercises: "加载练习错误",
+    no_exercises_found: "未找到练习",
+    equipment_label: "器械：",
+    primary_muscle_label: "主要肌肉：",
+    unknown: "未知",
+    no_image_available: "无可用图像",
   },
   heatmap: {
     week_days_short: {

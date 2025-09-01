@@ -3,7 +3,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Dumbbell, Crown, User, Grid, Hammer } from "lucide-react";
+import { Dumbbell, Grid, Hammer, Crown, Activity, Trophy } from "lucide-react";
 
 import { useCurrentLocale, useI18n } from "locales/client";
 import { cn } from "@/shared/lib/utils";
@@ -32,22 +32,21 @@ export function BottomNavigation() {
       shortLabel: t("bottom_navigation.programs"),
       mobileLabel: t("bottom_navigation.programs"),
       href: `${paths.programs}`,
-      // tiles icon
       icon: Grid,
       emoji: "WorkoutCoolSwag.png",
       description: t("bottom_navigation.programs_tooltip"),
       isActive: pathname.includes(paths.programs),
     },
     {
-      id: "premium",
-      label: t("bottom_navigation.premium"),
-      shortLabel: t("bottom_navigation.premium"),
-      mobileLabel: t("bottom_navigation.premium"),
-      href: `/${locale}/premium`,
-      icon: Crown,
-      emoji: "WorkoutCoolRich.png",
-      description: t("bottom_navigation.premium_tooltip"),
-      isActive: pathname.includes("/premium"),
+      id: "statistics",
+      label: t("bottom_navigation.statistics"),
+      shortLabel: t("bottom_navigation.statistics"),
+      mobileLabel: t("bottom_navigation.statistics"),
+      href: `/${locale}/statistics`,
+      icon: Activity,
+      emoji: "WorkoutCoolBiceps.png",
+      description: t("bottom_navigation.statistics_tooltip"),
+      isActive: pathname.includes("/statistics"),
     },
     {
       id: "tools",
@@ -60,14 +59,25 @@ export function BottomNavigation() {
       isActive: pathname.includes("/tools"),
     },
     {
-      id: "profile",
-      label: t("bottom_navigation.profile"),
-      shortLabel: t("bottom_navigation.profile"),
-      mobileLabel: t("bottom_navigation.profile"),
-      href: `/${locale}/profile`,
-      icon: User,
-      description: t("bottom_navigation.profile_tooltip"),
-      isActive: pathname.includes("/profile"),
+      id: "leaderboard",
+      label: t("bottom_navigation.leaderboard"),
+      shortLabel: t("bottom_navigation.leaderboard"),
+      mobileLabel: t("bottom_navigation.leaderboard"),
+      href: `/${locale}${paths.leaderboard}`,
+      icon: Trophy,
+      description: t("bottom_navigation.leaderboard_tooltip"),
+      isActive: pathname.includes(paths.leaderboard),
+    },
+    {
+      id: "premium",
+      label: t("bottom_navigation.premium"),
+      shortLabel: t("bottom_navigation.premium"),
+      mobileLabel: t("bottom_navigation.premium"),
+      href: `/${locale}/premium`,
+      icon: Crown,
+      emoji: "WorkoutCoolRich.png",
+      description: t("bottom_navigation.premium_tooltip"),
+      isActive: pathname.includes("/premium"),
     },
   ];
 
@@ -76,8 +86,8 @@ export function BottomNavigation() {
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#4F8EF7]/3 via-transparent to-[#25CB78]/3 pointer-events-none" />
 
-      <div className="relative px-1 sm:px-3 py-2">
-        <div className="flex justify-center items-center gap-1 sm:gap-2 max-w-full mx-auto">
+      <div className="relative sm:px-3 py-2">
+        <div className="flex justify-center items-center sm:gap-2 max-w-full mx-auto">
           {tabs.map((tab) => {
             const isActive = tab.isActive;
             const isPremium = tab.id === "premium";
@@ -149,7 +159,7 @@ export function BottomNavigation() {
                 {/* Label - responsive text */}
                 <span
                   className={cn(
-                    "text-[10px] sm:text-xs font-semibold transition-all duration-300 ease-out leading-tight truncate max-w-full text-center",
+                    "text-[9px] sm:text-xs font-semibold transition-all duration-300 ease-out leading-tight truncate max-w-full text-center",
                     isActive && isPremium
                       ? "text-transparent bg-gradient-to-r from-[#FFD93D] to-[#FFA500] bg-clip-text"
                       : isActive

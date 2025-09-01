@@ -1,4 +1,32 @@
 export default {
+  leaderboard: {
+    title: "Clasificación",
+    description: "Campeones de entrenamientos",
+    champion_badge: "🏆 Campeón",
+    runner_up_badge: "🥈 Subcampeón",
+    third_place_badge: "🥉 Tercer lugar",
+    second_place: "2do lugar",
+    third_place: "3er lugar",
+    workouts: "entrenamientos",
+    unable_to_load: "No se pudo cargar la clasificación",
+    try_again_later: "Inténtalo de nuevo más tarde",
+    no_champions_yet: "Aún no hay campeones",
+    complete_first_workout: "¡Completa tu primer entrenamiento para reclamar el trono!",
+    member_since: "Miembro desde",
+    workouts_per_week: "entrenamientos/semana",
+    last_workout: "Último entrenamiento",
+    page_title: "Clasificación de Campeones",
+    page_subtitle: "Sube a la cima y conviértete en una leyenda de Workout.cool",
+    period_all_time: "Global",
+    period_monthly: "Mes",
+    period_weekly: "Semana",
+    no_sessions_this_week: "Sin sesiones esta semana",
+    no_sessions_this_month: "Sin sesiones este mes",
+    registered_members_only: "Solo miembros registrados",
+    registered_members_description: "Crea una cuenta para aparecer en la clasificación",
+    reset_timezone: "Reinicio Europa/París",
+    reset_timezone_description: "Las clasificaciones semanales y mensuales se reinician a medianoche hora de París",
+  },
   programs: {
     available_programs: "Programas disponibles",
     exercises_in_session: "Ejercicios en sesión",
@@ -419,12 +447,16 @@ export default {
     home: "Inicio",
   },
   bottom_navigation: {
+    statistics: "Estadísticas",
+    statistics_tooltip: "Ver tus estadísticas",
     programs: "Programas",
     programs_tooltip: "Explorar programas",
     workouts: "Entrenamientos",
     workouts_tooltip: "Crear tu propio entrenamiento",
     premium: "Premium",
     premium_tooltip: "Torne-se Premium",
+    leaderboard: "Clasificación",
+    leaderboard_tooltip: "Ver ranking de entrenamiento",
     tools: "Herramientas",
     tools_tooltip: "Explorar herramientas",
     profile: "Perfil",
@@ -496,6 +528,11 @@ export default {
     title: "Novedades",
     release_notes: "Notas",
     notes: {
+      note_2025_08_18: {
+        title: "🏆 ¡Nueva Funcionalidad de Clasificación!",
+        content:
+          "<li>Nueva <strong>clasificación</strong> para competir con otros campeones de entrenamiento</li><li>Ver rankings por períodos <strong>todos los tiempos, mensual y semanal</strong></li><li>Rastrea tu posición entre los mejores performers</li><li>¡Motívate para subir en la clasificación! 🚀</li>",
+      },
       note_2025_07_09: {
         title: "🎯 Selección de Ejercicios, Favoritos y Nuevas Herramientas",
         content:
@@ -801,6 +838,9 @@ export default {
     },
   },
   commons: {
+    last_activity: "Última actividad",
+    registered_on: "Inscrito el",
+    just_now: "ahora mismo",
     signup_with: "Registrarse con {provider}",
     signin_with: "Iniciar sesión con {provider}",
     signup: "Registrarse",
@@ -1799,6 +1839,90 @@ export default {
         multidisciplinary: "Enfoque multidisciplinario con equipo médico",
       },
     },
+  },
+  statistics: {
+    title: "Estadísticas",
+    page_subtitle: "Sigue tu viaje fitness con análisis avanzados y perspectivas personalizadas.",
+    select_exercise: "Seleccionar Ejercicio",
+    active_daily_users: "Usuarios Activos Diarios",
+    success_rate: "Tasa de Éxito",
+    user_rating: "Calificación de Usuario",
+
+    // Tabs
+    tabs: {
+      video: "Video",
+      statistics: "Estadísticas",
+    },
+
+    // Chart titles and labels
+    weight: "Peso",
+    volume: "Volumen",
+    weight_progression: "Progresión de Peso",
+    weight_progression_chart: "Gráfico de progresión de peso",
+    weekly_volume: "Volumen Semanal",
+    volume_chart: "Gráfico de volumen",
+    estimated_1rm: "1 Rep Máx Estimado (1RM)",
+    one_rep_max_chart: "Gráfico de repetición máxima",
+    performance_over_time: "Rendimiento a lo Largo del Tiempo",
+
+    // Form and controls
+    timeframe: "Período de Tiempo",
+    timeframe_selector: "Selector de período de tiempo",
+
+    // Timeframes
+    timeframes: {
+      "4weeks": "4 Semanas",
+      "8weeks": "8 Semanas",
+      "12weeks": "12 Semanas",
+      "1year": "1 Año",
+    },
+
+    // Error messages
+    error_loading_data: "Error al cargar datos",
+    error_loading_weight_progression: "Error al cargar la progresión de peso",
+    error_loading_1rm: "Error al cargar datos de 1RM",
+    error_loading_volume: "Error al cargar datos de volumen",
+
+    // Empty states
+    no_data_yet: "Sin datos aún",
+    start_tracking: "Comienza a registrar para ver tu progreso",
+    no_1rm_data: "Sin datos de 1RM disponibles",
+    complete_sets_with_weight: "Completa series con peso para ver tu 1 Rep Máx (1RM)",
+    no_volume_data: "Sin datos de volumen disponibles",
+    complete_workouts: "Completa entrenamientos para ver tu volumen",
+
+    // Info and tooltips
+    "1rm_formula_info": "Información de fórmula 1RM",
+    volume_calculation: "Volumen = Peso × Reps × Series",
+    last_updated: "Última actualización: {date}",
+
+    // Premium
+    premium_required: "Se requiere Premium para acceder a las estadísticas",
+
+    // StatisticsPreviewOverlay
+    premium_statistics: "Estadísticas Premium",
+    premium_statistics_description: "Obtén información detallada sobre tu viaje fitness con análisis avanzados para cada ejercicio.",
+    total_volume: "Volumen Total",
+    pr_increase: "Aumento de PR",
+    weight_progress: "Progreso de Peso",
+    upgrade_now: "Actualizar Ahora",
+    rating: "Calificación 4.8/5",
+    no_ads: "Sin anuncios",
+    cancel_anytime: "Cancelar en cualquier momento",
+    preview_notice: "¡Esto es solo una vista previa! 👀",
+    preview_description: "Desbloquea el acceso completo a análisis detallados, seguimiento de progreso e información personalizada.",
+    get_premium_access: "Obtener Acceso Premium",
+
+    // ExercisesBrowser
+    all_equipment: "Todo el Equipo",
+    all_muscles: "Todos los Músculos",
+    search_exercises: "Buscar Ejercicios",
+    error_loading_exercises: "Error al cargar ejercicios",
+    no_exercises_found: "No se encontraron ejercicios",
+    equipment_label: "Equipo:",
+    primary_muscle_label: "Músculo Principal:",
+    unknown: "Desconocido",
+    no_image_available: "No hay imagen disponible",
   },
   heatmap: {
     week_days_short: {

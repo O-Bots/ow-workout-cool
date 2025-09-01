@@ -5,8 +5,7 @@ import { WorkoutSession } from "@/shared/lib/workout-session/types/workout-sessi
 import { convertWeight, type WeightUnit } from "@/shared/lib/weight-conversion";
 import { WorkoutSessionExercise, WorkoutSet, WorkoutSetType, WorkoutSetUnit } from "@/features/workout-session/types/workout-set";
 import { useWorkoutBuilderStore } from "@/features/workout-builder/model/workout-builder.store";
-
-import { ExerciseWithAttributes } from "../../workout-builder/types";
+import { ExerciseWithAttributes } from "@/entities/exercise/types/exercise.types";
 
 interface WorkoutSessionProgress {
   exerciseId: string;
@@ -137,6 +136,13 @@ export const useWorkoutSessionStore = create<WorkoutSessionState>((set, get) => 
 
     if (session) {
       workoutSessionLocal.update(session.id, { status: "completed", endedAt: new Date().toISOString() });
+      console.log({
+        session: { ...session, status: "completed", endedAt: new Date().toISOString() },
+        progress: {},
+        elapsedTime: 0,
+        isTimerRunning: false,
+        isWorkoutActive: false,
+      });
       set({
         session: { ...session, status: "completed", endedAt: new Date().toISOString() },
         progress: {},

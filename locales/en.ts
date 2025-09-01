@@ -1,4 +1,32 @@
 export default {
+  leaderboard: {
+    title: "Leaderboard",
+    description: "Top workout champions",
+    champion_badge: "🏆 Champion",
+    runner_up_badge: "🥈 Runner-up",
+    third_place_badge: "🥉 Third Place",
+    second_place: "2nd Place",
+    third_place: "3rd Place",
+    workouts: "workouts",
+    unable_to_load: "Unable to load leaderboard",
+    try_again_later: "Please try again later",
+    no_champions_yet: "No champions yet",
+    complete_first_workout: "Complete your first workout to claim the throne!",
+    member_since: "Member since",
+    workouts_per_week: "workouts/week",
+    last_workout: "Last workout",
+    page_title: "Champions Leaderboard",
+    page_subtitle: "Climb to the top and become a Workout.cool legend",
+    period_all_time: "All Time",
+    period_monthly: "Month",
+    period_weekly: "Week",
+    no_sessions_this_week: "No sessions this week",
+    no_sessions_this_month: "No sessions this month",
+    registered_members_only: "Registered members only",
+    registered_members_description: "Create an account to appear in the leaderboard",
+    reset_timezone: "Europe/Paris Reset",
+    reset_timezone_description: "Weekly and monthly leaderboards reset at midnight Paris time",
+  },
   programs: {
     available_programs: "Available programs",
     exercises_in_session: "Exercises in session",
@@ -388,17 +416,26 @@ export default {
     conversion_flow_title: "Redirecting...",
     conversion_flow_message: "Successfully signed in! Redirecting to checkout...",
     redirecting_to_checkout: "Redirecting to checkout",
+
+    // Premium Gate
+    premium_feature: "Premium Feature",
+    upgrade_to_access_feature: "Upgrade to premium to access this feature",
+    unlock_all_features: "Unlock all features and support development",
   },
   breadcrumbs: {
     home: "Home",
   },
   bottom_navigation: {
+    statistics: "Statistics",
+    statistics_tooltip: "View your statistics",
     programs: "Programs",
     programs_tooltip: "Browse programs",
     workouts: "Workouts",
     workouts_tooltip: "Create your own workout",
     premium: "Premium",
     premium_tooltip: "Upgrade to Premium",
+    leaderboard: "Leaderboard",
+    leaderboard_tooltip: "View workout rankings",
     tools: "Tools",
     tools_tooltip: "Browse tools",
     profile: "Profile",
@@ -1360,6 +1397,11 @@ export default {
     title: "What's New",
     release_notes: "Release Notes",
     notes: {
+      note_2025_08_18: {
+        title: "🏆 New Leaderboard Feature!",
+        content:
+          "<li>New <strong>leaderboard</strong> to compete with other workout champions</li><li>View rankings by <strong>all-time, monthly, and weekly</strong> periods</li><li>Track your position among the top performers</li><li>Motivate yourself to climb the rankings! 🚀</li>",
+      },
       note_2025_07_09: {
         title: "🎯 Exercise Selection, Favorites & New Tools",
         content:
@@ -1664,6 +1706,11 @@ export default {
     },
   },
   commons: {
+    last_activity: "Last activity",
+    registered_on: "Registered on",
+    upgrade_to_premium: "Upgrade to Premium",
+    refresh: "Refresh",
+    just_now: "just now",
     signup_with: "Sign up with {provider}",
     signin_with: "Sign in with {provider}",
     signup: "Sign up",
@@ -1789,6 +1836,90 @@ export default {
     add_to_favorites: "Add to favorites",
     remove_from_favorites: "Remove from favorites",
     favorites: "Favorites",
+  },
+  statistics: {
+    title: "Statistics",
+    page_subtitle: "Track your fitness journey with advanced analytics and personalized insights.",
+    select_exercise: "Select Exercise",
+    active_daily_users: "Active Daily Users",
+    success_rate: "Success Rate",
+    user_rating: "User Rating",
+
+    // Tabs
+    tabs: {
+      video: "Video",
+      statistics: "Statistics",
+    },
+
+    // Chart titles and labels
+    weight: "Weight",
+    volume: "Volume",
+    weight_progression: "Weight Progression",
+    weight_progression_chart: "Weight progression chart",
+    weekly_volume: "Weekly Volume",
+    volume_chart: "Volume chart",
+    estimated_1rm: "Estimated 1 Rep Max (1RM)",
+    one_rep_max_chart: "One rep max chart",
+    performance_over_time: "Performance Over Time",
+
+    // Form and controls
+    timeframe: "Timeframe",
+    timeframe_selector: "Timeframe selector",
+
+    // Timeframes
+    timeframes: {
+      "4weeks": "4 Weeks",
+      "8weeks": "8 Weeks",
+      "12weeks": "12 Weeks",
+      "1year": "1 Year",
+    },
+
+    // Error messages
+    error_loading_data: "Error loading data",
+    error_loading_weight_progression: "Error loading weight progression",
+    error_loading_1rm: "Error loading 1RM data",
+    error_loading_volume: "Error loading volume data",
+
+    // Empty states
+    no_data_yet: "No data yet",
+    start_tracking: "Start tracking to see your progress",
+    no_1rm_data: "No 1RM data available",
+    complete_sets_with_weight: "Complete sets with weight to see your 1 Rep Max (1RM)",
+    no_volume_data: "No volume data available",
+    complete_workouts: "Complete workouts to see your volume",
+
+    // Info and tooltips
+    "1rm_formula_info": "1RM formula information",
+    volume_calculation: "Volume = Weight × Reps × Sets",
+    last_updated: "Last updated: {date}",
+
+    // Premium
+    premium_required: "Premium required to access statistics",
+
+    // StatisticsPreviewOverlay
+    premium_statistics: "Premium Statistics",
+    premium_statistics_description: "Get detailed insights into your fitness journey with advanced analytics for each exercise.",
+    total_volume: "Total Volume",
+    pr_increase: "PR Increase",
+    weight_progress: "Weight Progress",
+    upgrade_now: "Upgrade Now",
+    rating: "4.8/5 rating",
+    no_ads: "No ads",
+    cancel_anytime: "Cancel anytime",
+    preview_notice: "This is just a preview! 👀",
+    preview_description: "Unlock full access to detailed analytics, progress tracking, and personalized insights.",
+    get_premium_access: "Get Premium Access",
+
+    // ExercisesBrowser
+    all_equipment: "All Equipment",
+    all_muscles: "All Muscles",
+    search_exercises: "Search Exercises",
+    error_loading_exercises: "Error loading exercises",
+    no_exercises_found: "No exercises found",
+    equipment_label: "Equipment:",
+    primary_muscle_label: "Primary Muscle:",
+    unknown: "Unknown",
+    no_image_available: "No image available",
   },
   heatmap: {
     week_days_short: {

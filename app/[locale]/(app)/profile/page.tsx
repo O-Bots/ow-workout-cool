@@ -39,6 +39,7 @@ export default function ProfilePage() {
           </div>
         </div>
       )}
+
       <div className="mt-4">
         <WorkoutSessionHeatmap until={until} values={values} />
       </div>
